@@ -1,0 +1,61 @@
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+      <div class="main-grids">
+        <div class="recommended">
+          <div class="recommended-grids english-grid">
+            <div class="recommended-info">
+              <div class="heading">
+                <h3>Top News</h3>
+                <p id="notice"><%= notice %></p>
+              </div>
+              <div class="heading-right">
+                <a  href="#small-dialog8" class="play-icon popup-with-zoom-anim">Subscribe</a>
+              </div>
+              <div class="clearfix"> </div>
+            </div>
+            <% @posts.each do |post| %>
+            <div class="col-md-2 resent-grid recommended-grid sports-recommended-grid">
+              <div class="resent-grid-img recommended-grid-img">
+ <%= link_to  post do %>
+ <% if post.poster == nil %>
+ <%= image_tag "no_image_available.png" %>
+ <% else %>
+  <%= image_tag post.poster %>
+  <% end %>
+   <% end %>
+                <div class="time small-time sports-tome">
+                  
+                </div>
+                <div class="clck sports-clock">
+                  <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+                </div>
+              </div>
+              <div class="resent-grid-info recommended-grid-info">
+                <h5><%= link_to post.name, post  %></h5>
+                <p class="author"></p>
+                <p class="views">11111</p>
+              </div>
+            </div>
+
+
+            <% end %>
+
+
+
+
+            <div class="clearfix"> </div>
+          </div>
+        </div>
+        </div>
+
+
+
+      <!-- Modal Subscribe -->
+                  <div id="small-dialog8" class="mfp-hide">
+                    <h3>Subscribe to our newsletters</h3> 
+                    <div class="signup subscribe-grid">
+                      <form>
+                        <input type="text" class="email" placeholder="Email" required="required" pattern="([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?" title="Enter a valid email"/>
+                        <input type="submit"  value="Subscribe"/>
+                      </form>
+                    </div>
+                  </div>

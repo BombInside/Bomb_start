@@ -1,0 +1,19 @@
+
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  username: root
+  password: admin229054
+  host: localhost
+
+development:
+  <<: *default
+  database: xtc_development
+
+test:
+  <<: *default
+  database: xtc_test
+
+production:
+  <<: *default
+  database: xtc
