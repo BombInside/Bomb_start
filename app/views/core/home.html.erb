@@ -27,8 +27,7 @@
 <%= link_to post.name, post, class: 'title title-info' %>
 							</h3>
 							<ul>
-								<li><p class="author author-info"><a href="#" class="author">John Maniya</a>
-<%= post.user %>
+								<li><p class="author author-info"><a href="#" class="author"><%= post.user.name.to_s %></a>
 								</p></li>
 								<li class="right-list"><p class="views views-info">2,114,200 views</p></li>
 							</ul>

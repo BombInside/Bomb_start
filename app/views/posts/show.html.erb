@@ -25,7 +25,7 @@
 					</div>
 					<div class="clearfix"> </div>
 					<div class="published">
-						<script src="jquery.min.js"></script>
+						<script src="jquery-1.11.1.min.js"></script>
 							<script>
 								$(document).ready(function () {
 									size_li = $("#myList li").size();
@@ -50,9 +50,12 @@
 											
 										</p>
 									</li>
-									<li>
-										<p>Nullam fringilla sagittis tortor ut rhoncus. Nam vel ultricies erat, vel sodales leo. Maecenas pellentesque, est suscipit laoreet tincidunt, ipsum tortor vestibulum leo, ac dignissim diam velit id tellus. Morbi luctus velit quis semper egestas. Nam condimentum sem eget ex iaculis bibendum. Nam tortor felis, commodo faucibus sollicitudin ac, luctus a turpis. Donec congue pretium nisl, sed fringilla tellus tempus in.</p>
-										<p>Nullam fringilla sagittis tortor ut rhoncus. Nam vel ultricies erat, vel sodales leo. Maecenas pellentesque, est suscipit laoreet tincidunt, ipsum tortor vestibulum leo, ac dignissim diam velit id tellus. Morbi luctus velit quis semper egestas. Nam condimentum sem eget ex iaculis bibendum. Nam tortor felis, commodo faucibus sollicitudin ac, luctus a turpis. Donec congue pretium nisl, sed fringilla tellus tempus in.</p>
+									
+									<p>
+										<%= @post.description %>
+									</p>
+									
+
 										<div class="load-grids">
 											<div class="load-grid">
 												<p>Category</p>
@@ -62,7 +65,7 @@
 											</div>
 											<div class="clearfix"> </div>
 										</div>
-									</li>
+									
 								</ul>
 							</div>
 					</div>
@@ -177,7 +180,7 @@
 				</div>
 				<div class="col-md-4 single-right">
 					<h3>Последние добавления</h3>
-					<% @posts.each do |post| %>
+<% @posts.each do |post| %>
 					<div class="single-grid-right">
 						<div class="single-right-grids">
 							<div class="col-md-4 single-right-grid-left">
@@ -191,7 +194,7 @@
 							</div>
 							<div class="col-md-8 single-right-grid-right">
 								<%= link_to post.name, post  %>
-								<p class="author"><a href="#" class="author">John Maniya</a></p>
+								<p class="author"><a href="#" class="author"><%= post.user.name.to_s %></a></p>
 								<p class="views">2,114,200 views</p>
 							</div>
 							<div class="clearfix"> </div>
